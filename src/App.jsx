@@ -5,22 +5,7 @@ import { Button } from "@mui/material";
 function App() {
   return (
     <div>
-      <Button
-        startIcon={<Settings />}
-        variant="contained"
-        color="primary"
-        sx={{
-          "&:hover": {
-            backgroundColor: "#000",
-          },
-        }}
-      >
-        Create
-      </Button>
-
-      <Button variant="contained" color="secondary">
-        New btn
-      </Button>
+      
     </div>
   );
 }
