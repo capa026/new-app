@@ -20,8 +20,13 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   const [dark, setDark] = useState(false);
+
+  const handleMode = () => {
+    setMode(mode === "light" ? "dark" : "light");
+    setDark(!dark);
+  };
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -87,7 +92,11 @@ const Sidebar = () => {
               <ListItemIcon>
                 {dark ? <ModeNight /> : <LightMode />}
               </ListItemIcon>
-              <Switch checked={dark} onChange={() => setDark(!dark)} />
+              <Switch
+                checked={dark}
+                onChange={() => {handleMode()
+                }}
+              />
             </ListItemButton>
           </ListItem>
         </List>
