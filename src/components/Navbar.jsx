@@ -49,7 +49,7 @@ const Navbar = () => {
     <AppBar position="sticky" sx={{ color: "white" }}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          New Appppp
+          New App
         </Typography>
         <AccountTree sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
